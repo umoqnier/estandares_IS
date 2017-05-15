@@ -18,17 +18,17 @@ function estructura_pregunta(pregunta, opcion_1, opcion_2, opcion_3, opcion_4,
 
 preguntas[0] = new estructura_pregunta(
 	"¿Qué tema se abordó en el tutorial?",
-	"Programación lineal", 
-	"Estándares Básicos", 
-	"UML", 
+	"Programación lineal",
+	"Estándares Básicos",
+	"UML",
 	"Análisis de Requerimientos",
 	1
 );
 preguntas[1] = new estructura_pregunta(
 	"¿Cuál fue el enfoque del tutorial?",
-	"Investigación", 
-	"Ensayo", 
-	"Introductorio", 
+	"Investigación",
+	"Ensayo",
+	"Introductorio",
 	"Tesis",
 	2
 );
@@ -42,157 +42,243 @@ preguntas[2] = new estructura_pregunta(
 );
 preguntas[3] = new estructura_pregunta(
 	"¿Cuantos años de conocimientos se recaudan en el SWEBOK?",
-	"15 años", 
-	"100 años", 
-	"56 años", 
-	"40 años", 
+	"15 años",
+	"100 años",
+	"56 años",
+	"40 años",
 	3
 );
 preguntas[4] = new estructura_pregunta(
 	"El cuerpo del conocimiento está dividido en _____________",
 	"procesos",
 	"lenguajes de programación",
-	"áreas de conocimiento", 
+	"áreas de conocimiento",
 	"disciplinas",
 	2
 );
 preguntas[5] = new estructura_pregunta(
 	"Asociación que comienza con el SWEBOK.",
 	"SWECC",
-	"IEEE", 
-	"Intel", 
-	"IBM", 
+	"IEEE",
+	"Intel",
+	"IBM",
 	0
 );
 preguntas[6] = new estructura_pregunta(
 	"El crecimiento del SWEBOK hizo necesaria la _____________",
-	"gestión formal", 
+	"gestión formal",
 	"normalización de procesos",
-	"inversión de capital", 
-	"participación altruista", 
+	"inversión de capital",
+	"participación altruista",
 	0
 );
 preguntas[7] = new estructura_pregunta(
 	"¿Cuáles son las fases en las que se divide el SWEBOK?",
-	"Hombre de Paja, Hombre de Piedra y Hombre de Hierro", 
-	"Hombre ancestral, Hombre moderno y Hombre del ahora", 
-	"Fase primaria, fase de madurez y fase final", 
+	"Hombre de Paja, Hombre de Piedra y Hombre de Hierro",
+	"Hombre ancestral, Hombre moderno y Hombre del ahora",
+	"Fase primaria, fase de madurez y fase final",
 	"Fase altruista, Fase de formalización y fase de afinación",
 	0
 );
 preguntas[8] = new estructura_pregunta(
-	"¿En que año publica la versión aceptada actualmente del SWEBOK?", 
-	"2010", 
-	"2000", 
-	"2004", 
+	"¿En que año publica la versión aceptada actualmente del SWEBOK?",
+	"2010",
+	"2000",
+	"2004",
 	"2006",
 	2
 );
 preguntas[9] = new estructura_pregunta(
 	"¿Cuál es el propósito del SWEBOK?",
-	"Normalizar el conocimiento", 
+	"Normalizar el conocimiento",
 	"Describir que parte del conocimiento es generalmente aceptado, organizar esa parte y proporcionar acceso a la información de interés",
-	"Vender libros", 
-	"No divagar en cuanto a investigación ingenieril", 
+	"Vender libros",
+	"No divagar en cuanto a investigación ingenieril",
 	1
 );
 preguntas[10] = new estructura_pregunta(
 	"De los cinco objetivos del SWEBOK ¿Cuál 'Promueve una visión consistente de la ingeniería del software del mundo'?",
-	"4° objetivo", 
+	"4° objetivo",
 	"5° objetivo",
-	"2° objetivo", 
-	"1° objetivo", 
+	"2° objetivo",
+	"1° objetivo",
 	3
 );
 preguntas[11] = new estructura_pregunta(
 	"De los cinco objetivos del SWEBOK ¿Cuál busca 'Caracterizar los contenidos de la disciplina de la ingeniería del software'?",
-	"1° objetivo", 
+	"1° objetivo",
 	"2° objetivo",
-	"3° objetivo", 
-	"4° objetivo", 
+	"3° objetivo",
+	"4° objetivo",
 	2
 );
 preguntas[12] = new estructura_pregunta(
 	"De los cinco objetivos del SWEBOK ¿Cuál busca 'Clarificar la situación – y definir fronteras – de la ingeniería del software'?",
-	"3° objetivo", 
+	"3° objetivo",
 	"2° objetivo",
-	"1° objetivo", 
-	"5° objetivo", 
+	"1° objetivo",
+	"5° objetivo",
 	1
 );
 preguntas[13] = new estructura_pregunta(
 	"De los cinco objetivos del SWEBOK ¿Cuál busca 'Proporcionar al cuerpo de conocimiento de la ingeniería del software con los temas de interés'?",
-	"5° objetivo", 
+	"5° objetivo",
 	"4° objetivo",
-	"3° objetivo", 
-	"1° objetivo", 
+	"3° objetivo",
+	"1° objetivo",
 	1
 );
 
 preguntas[14] = new estructura_pregunta(
 	"¿De los cinco objetivos del SWEBOK ¿Cuál busca 'Proporcionar una base para el desarrollo planes de estudio, certificaciones individuales y materiales para licencias'?",
-	"2° objetivo", 
+	"2° objetivo",
 	"3° objetivo",
-	"1° objetivo", 
-	"5° objetivo", 
+	"1° objetivo",
+	"5° objetivo",
 	3
 );
 
 preguntas[15] = new estructura_pregunta(
 	"¿En cuántas áreas del conocimiento esta dividido el material perteneciente a la ingeniería de software?",
-	"Quince", 
+	"Quince",
 	"Cien",
-	"Diez", 
+	"Diez",
 	"Dos",
 	2
 );
 preguntas[16] = new estructura_pregunta(
-	"El plan también debe identificar: ",
-	"Nuevos requisitos", "Nuevos casos de uso",
-	"Los riesgos", "A los mejores programadores", 3
+	"¿Qué es común en cuanto a desarrollo de productor entre compañias actuales?",
+	"Desarrollar todos sus productos desde cero",
+	"Adquirir algunos productos para integrarlos a los propios",
+	"Invertir grandes cantidades de dinero en contratación de personal",
+	"Contratar a los mejores programadores de las universidades",
+	1
 );
 preguntas[17] = new estructura_pregunta(
-	"¿Cuántas secciones incluyen por lo regular los planes?",
-	"6", "5",
-	"4", "7", 4
+	"¿Por qué no es eficaz utilizar modelos de madurez o estándares con problemas específicos del negocio?",
+	"Mantienen barreas para enforcase",
+	"Son caros",
+	"Funcionan solo en grandes compañias",
+	"No tienen fundamento científico",
+	 0
 );
 
 preguntas[18] = new estructura_pregunta(
-	"En esta sección se describen brevemente los objetivos: ",
-	"Organización del Proyecto", "Divisón del trabajo",
-	"Desarrollo", "Introducción", 4
+	"¿Cuanto abarca del ciclo de vida del software la metodología de CMMI-DEV?",
+	"El prototipado",
+	"El mantenimiento",
+	"Inicio y entrega",
+	"Concepción, entrega y mantenimiento",
+	3
 );
 
 preguntas[19] = new estructura_pregunta(
-	"En esta sección se describen brevemente los objetivos: ",
-	"Organización del Proyecto", "Introducción",
-	"Desarrollo", "Metas", 2
+	"¿Cuál es el número de áreas del CCMI-DEV que se enfocan al proceso de desarrollo específico?",
+	"5",
+	"22",
+	"16",
+	"2",
+	 0
 );
 
 preguntas[20] = new estructura_pregunta(
-	"En esta sección refiere a la forma que se organiza el equipo: ",
-	"Organización del Proyecto", "Divisón del trabajo",
-	"Desarrallo", "Objetivos", 1
+	"Menciona las cinco áreas que comprenden los procesos de desarrollo específico del CMMI-DEV",
+	"Organización del Proyecto, División de requerimientos, Soluciones Técnicas, Entrega y Mantenimiento",
+	"Prototipado, Levantamiento de requerimientos, Divisón del trabajo, Desarrollo y Entrega",
+	"Direccionamiento, Desarrollo de requerimientos, Soluciones Técnicas, Integración del producto, Verificación y validación",
+	"Introducción, Desarrollo, Objetivos, Conclusión y Mantenimiento",
+	2
 );
 
 preguntas[21] = new estructura_pregunta(
-	"En esta sección se refiere a la forma que se organiza el equipo: ",
-	"Calendario del proyecto", "Divisón del trabajo",
-	"Desarrallo", "Organización del Proyecto", 4
+	"¿Quienes desarrollaron Trillium (metodología derivada de CMM)?",
+	"Compañías de telecomunicaciones Canadienses",
+	"Sector salud de India",
+	"Empresarios Japoneces",
+	"Gobierno Estadounidense",
+	0
 );
 
 preguntas[22] = new estructura_pregunta(
-	"Detalla los posibles riesgos del sistema: ",
-	"Calendario del proyecto", "Errores en el software",
-	"Fallas de programación", "Análisis de riesgos", 4
+	"¿Quienes desarrollaron BOOTSTRAP (metodología derivada de CMM)?",
+	"Empresarios Japoneces",
+	"Comunidad Europea de ESPRIT",
+	"Compañias de telecomunicaciones Canadienses",
+	"Agencias de seguridad del Reino Unido",
+	 1
 );
 
 preguntas[23] = new estructura_pregunta(
-	"Detalla los posibles riesgos del sistema: ",
-	"Análisis de factibilidad", "Errores en el software",
-	"Análisis de riesgo", "Análisis de Errores", 3
+	"Año en el que se propone SPICE como estándar internacional",
+	"2000",
+	"1990",
+	"1995",
+	"2010",
+	2
 );
 
+preguntas[24] = new estructura_pregunta(
+	"¿Cual es el enfoque de SPICE?",
+	"Procesos y capabilidad",
+	"Desarrollo de personal",
+	"Contratación de buenos desarrolladores",
+	"Mantenimiento de software propietario",
+	0
+);
+
+preguntas[25] = new estructura_pregunta(
+	"¿De que constan las prácticas base en SPICE?",
+	"Son las más sencillas de realizar",
+	"Al ser básicas se espera perfección",
+	"Son escenciales para un proceso específico",
+	"No son importantes por que son sencillas",
+	2
+);
+
+preguntas[26] = new estructura_pregunta(
+	"¿En que consisten las prácticas genéricas de SPICE?",
+	"Institucionalización o implementación de un proceso",
+	"Interfaces para el usuario",
+	"Replanteamiento de los procesos para adaptarlos",
+	"Hacer los procesos colaborativos para entornos generales",
+	0
+);
+
+preguntas[27] = new estructura_pregunta(
+	"¿Cuantas son las actividades consideradas en la forma funcional de SPICE?",
+	"10",
+	"3",
+	"9",
+	"5",
+	3
+);
+
+preguntas[28] = new estructura_pregunta(
+	"¿Cuál es el nombre de la actividad funcional que 'se asegura de la correcta operación y uso' en SPICE?",
+	"Ingeniería",
+	"Proyecto",
+	"Suministrando al cliente",
+	"Soporte",
+	2
+);
+
+preguntas[29] = new estructura_pregunta(
+	"¿Cuál es el nombre de la actividad funcional que 'especifíca, implementa y mantiene el sistema' en SPICE?",
+	"Proyecto",
+	"Ingeniería",
+	"Organización",
+	"Soporte",
+	1
+);
+
+preguntas[30] = new estructura_pregunta(
+	"¿Cuál es el nombre de la actividad funcional que 'establece, coordina o maneja los recursos y provee servicios al cliente' en SPICE?",
+	"Soporte",
+	"Organización",
+	"Proyecto",
+	"Ingeniería",
+	2
+);
 
 function generar_examen(){
 	var head_pregunta = "";
@@ -200,13 +286,13 @@ function generar_examen(){
 	var respuestas = "";
 	var indice = Math.floor(Math.random() * preguntas.length);
 	for(i = 0; i < 10; i++){
-		head_pregunta += '<h3>Pregunta ' + (i+1) + ': ';		
+		head_pregunta += '<h3>Pregunta ' + (i+1) + ': ';
 		while(indice_list.indexOf(indice) != -1)
 			indice = Math.floor(Math.random() * preguntas.length);
 			indice_list.push(indice);
 		aux_pregunta += preguntas[indice]["pregunta"] + '</h3><br>';
 		for (resp in preguntas[indice]["respuestas"]){
-			respuestas += '<input class="answers" type="radio" name="resp'+i+'" value="'+resp+'"><label>' + preguntas[indice]["respuestas"][resp] + '</label><br>';	
+			respuestas += '<input class="answers" type="radio" name="resp'+i+'" value="'+resp+'"><label>' + preguntas[indice]["respuestas"][resp] + '</label><br>';
 		}
 		pregunta_to_html = head_pregunta + aux_pregunta + respuestas;
 		document.getElementById("pregunta"+i).innerHTML = pregunta_to_html;
@@ -214,14 +300,14 @@ function generar_examen(){
 		aux_pregunta = "";
 		respuestas = "";
 	}
-	
+
 }
 
 function comprobar(){
 	var inputElements = document.getElementsByClassName('answers');
 	for(var i=0; inputElements[i]; ++i){
-      if(inputElements[i].checked){      	
-     	values_list.push(inputElements[i].value);             
+      if(inputElements[i].checked){
+     	values_list.push(inputElements[i].value);
 		}
 	}
 	if(values_list.length != indice_list.length){
