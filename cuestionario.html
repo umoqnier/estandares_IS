@@ -9,13 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Objetivo</title>
+    <title>Estándares básicos</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -79,27 +82,57 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/objetivo_logo.jpg')">
+    <header class="intro-header" style="background-image: url('img/test.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>Objetivo</h1>
-                        <h2 class="subheading">Se expondrá de forma general que implican 
-                        los estándares y por qué deben ser usados. Con ello se logrará que todo aquel que ingrese al tutorial entienda
-                        la importancia de los estándares básicos. Además,se mostrará de forma amplia y meramente introductoria los temas de SWEBOK, CMMI / IPPD y SPICE
-                        con lo que se pretende establecer como cumplido el primer punto.</h2>
+                    <div class="site-heading">
+                        <h1>Cuestionario</h1>
+                        <hr class="small">
+                        <span class="subheading">Hora de probar los conocimientos adquiridos</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Post Content -->
-   
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div id="preguntas">
+            <!-- Cuestionario -->
+            <script src="js/cuestionario.js"></script>
+            
+                <form name="cuestionario" id="un-form">                    
+                    <div id="pregunta0"></div>
+                    <div id="pregunta1"></div>
+                    <div id="pregunta2"></div>                    
+                    <div id="pregunta3"></div>
+                    <div id="pregunta4"></div>
+                    <div id="pregunta5"></div>
+                    <div id="pregunta6"></div>
+                    <div id="pregunta7"></div>
+                    <div id="pregunta8"></div>
+                    <div id="pregunta9"></div>                    
+                    <div id="resultado"></div>                    
+                </form>
+                <br>
+                <div id="boton">
+                    <button type="button" class="btn btn-success" onclick="comprobar()">Calificar</button> 
+                </div>
+                <script>
+                    generar_examen();
+                </script>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <hr>
 
     <!-- Footer -->
-    <footer>
+   <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -140,10 +173,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>

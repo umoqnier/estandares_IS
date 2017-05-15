@@ -1,7 +1,9 @@
 var preguntas = [];
 var examen = [];
 var count_preg_resp = 0;
-var contador_buenas = 0;
+var buenas = 0;
+var indice_list = [];
+var values_list = [];
 
 function estructura_pregunta(pregunta, opcion_1, opcion_2, opcion_3, opcion_4,
 	r_correcta) {
@@ -12,170 +14,137 @@ function estructura_pregunta(pregunta, opcion_1, opcion_2, opcion_3, opcion_4,
 	this.respuestas[2] = opcion_3;
 	this.respuestas[3] = opcion_4;
 	this.correcta = parseInt(r_correcta);
-	this.ocupado = false;
-}
-
-function examen_aleatorio() {
-	var contador = 0;
-	var indice = 0;
-	while (contador < 10) {
-		indice = Math.floor(Math.random() * preguntas.length);
-		if (!preguntas[indice].ocupado) {
-			preguntas[indice].ocupado = true;
-			examen[contador] = preguntas[indice];
-			contador++;
-		}
-	}
-}
-
-function generar_pregunta() {
-	document.getElementById("contador_preguntas").innerHTML = '<h4> Pregunta ' +
-		(count_preg_resp + 1) + '</h4>';
-	var txt_respuestas = "";
-	for (i in examen[count_preg_resp].respuestas) {
-		txt_respuestas += '<input type="radio" name="resp" value="r' + i +
-			'" checked><label>' + examen[count_preg_resp].respuestas[i] + '</label><br>';
-	}
-	document.getElementById("pregunta").innerHTML = examen[count_preg_resp].pregunta;
-	document.getElementById("respuestas").innerHTML = txt_respuestas;
-	count_preg_resp++;
-}
-
-function comprobar() {
-	var respuesta = checar_resp_selec(document.cuestionario.resp) + 1;
-	if (examen[count_preg_resp - 1].correcta == respuesta) {
-		document.getElementById("resultado").innerHTML =
-			'<h4 id="bien">¡Correcto!</h4>';
-		contador_buenas++;
-	} else {
-		document.getElementById("resultado").innerHTML =
-			'<h4 id="mal">¡Incorrecto!</h4>';
-	}
-	if (count_preg_resp == 9) {
-		document.getElementById("boton1").value = "Finalizar";
-	}
-	document.getElementById("boton").innerHTML =
-		'<input class= "reveal boton" id="boton2" type="button" value="Siguiente" onclick="avanzar()">';
-}
-
-function avanzar() {
-	var texto = "";
-	if (count_preg_resp < 10) {
-		generar_pregunta();
-		document.getElementById("resultado").innerHTML = "";
-		document.getElementById("boton").innerHTML =
-			'<input class= "reveal boton" id="boton1" type="button" value="Checar" onclick="comprobar()">';
-	} else {
-		var calif = "La calificación es: " + contador_buenas + ". ";
-		var texto = "";
-		if (contador_buenas < 6) {
-			texto += "Falta mejorar, de vuelta al estudio Doctor."
-		} else if (contador_buenas < 9) {
-			texto += "Casi perfecto, solo detalles son los que hay que afinar."
-		} else {
-			texto += "Es usted un Dios del tema doctor."
-		}
-		document.getElementById("resultado").innerHTML =
-			'<span id="calificacion">' + calif + '</span>' +
-			'<br><span id="mensaje">' + texto + '</span>';
-		document.getElementById("boton").innerHTML =
-			'<input class= "reveal boton"  id="boton3" type="button" value="Reiniciar" onclick="location.reload()">';
-	}
-
-}
-
-
-function checar_resp_selec(radio_boton) {
-	for (i = 0; i < radio_boton.length; i++) {
-		if (radio_boton[i].checked) {
-			return i;
-		}
-	}
-	return 0;
 }
 
 preguntas[0] = new estructura_pregunta(
-	"¿Cuál tema no fue descrito?",
-	"Planeación", "Modelado", "Líneas Base", "Análisis de Requerimientos",
-	4
+	"¿Qué tema se abordó en el tutorial?",
+	"Programación lineal", 
+	"Estándares Básicos", 
+	"UML", 
+	"Análisis de Requerimientos",
+	1
 );
 preguntas[1] = new estructura_pregunta(
-	"¿Después de qué fase sigue la implementación?",
-	"Pruebas", "Mantenimiento", "Requerimientos", "Diseño",
-	4
-);
-preguntas[2] = new estructura_pregunta(
-	"¿Por qué no pueden cambiar las versiones de los componentes en una línea base?",
-	"Sí pueden cambiar", "Para poder reconstruir la línea base",
-	"Afecta al mantenimiento",
-	"Altera los requerimientos",
+	"¿Cuál fue el enfoque del tutorial?",
+	"Investigación", 
+	"Ensayo", 
+	"Introductorio", 
+	"Tesis",
 	2
 );
+preguntas[2] = new estructura_pregunta(
+	"Propósito del SWEBOK",
+	"Delimitar el alcance de la Ingeniería de software", "Concentrar conocimientos sobre computación",
+	"Estandarizar metodologías",
+	"Albergar todo lo que se sabe sobre procesos",
+	"Vender libros",
+	0
+);
 preguntas[3] = new estructura_pregunta(
-	"Línea base es: una colección de versiones de _________ que construyen un sistema.",
-	"componenetes", "sistema", "software",
-	"código", 1
+	"¿Cuantos años de conocimientos se recaudan en el SWEBOK?",
+	"15 años", 
+	"100 años", 
+	"56 años", 
+	"40 años", 
+	3
 );
 preguntas[4] = new estructura_pregunta(
-	"El diseño de la construcción puede abordar la solución desde una perspectiva _______",
-	"estática", "dinámica",
-	"equilibrada", "abierta", 2
+	"El cuerpo del conocimiento está dividido en _____________",
+	"procesos",
+	"lenguajes de programación",
+	"áreas de conocimiento", 
+	"disciplinas",
+	2
 );
 preguntas[5] = new estructura_pregunta(
-	"El enfoque de perspectiva dinámica proporciona la descripción de: ",
-	"objetos", "modelos", "variables",
-	"comportamiento", 4
+	"Asociación que comienza con el SWEBOK.",
+	"SWECC",
+	"IEEE", 
+	"Intel", 
+	"IBM", 
+	0
 );
 preguntas[6] = new estructura_pregunta(
-	"¿Qué tipo de perspectiva proporciona la descripción de  las operaciones, detalles internos y lógica de la entidad de diseño",
-	"dinámica", "estructural",
-	"estática", "interna", 1
+	"El crecimiento del SWEBOK hizo necesaria la _____________",
+	"gestión formal", 
+	"normalización de procesos",
+	"inversión de capital", 
+	"participación altruista", 
+	0
 );
 preguntas[7] = new estructura_pregunta(
-	"Este enfoque involucra métodos gráficos, tabulares, entre otros.",
-	"científico", "matemático", "superficial", "dinámico", 4
+	"¿Cuáles son las fases en las que se divide el SWEBOK?",
+	"Hombre de Paja, Hombre de Piedra y Hombre de Hierro", 
+	"Hombre ancestral, Hombre moderno y Hombre del ahora", 
+	"Fase primaria, fase de madurez y fase final", 
+	"Fase altruista, Fase de formalización y fase de afinación",
+	0
 );
 preguntas[8] = new estructura_pregunta(
-	"El enfoque dinámico utiliza métodos: ", "gráficos y textuales",
-	"gráficos y tabulares",
-	"gráficos y científicos", "gráficos y matemáticos", 2
+	"¿En que año publica la versión aceptada actualmente del SWEBOK?", 
+	"2010", 
+	"2000", 
+	"2004", 
+	"2006",
+	2
 );
 preguntas[9] = new estructura_pregunta(
-	"El código poco legible provoca: ",
-	"Más ganancias", "Tiempo de espera",
-	"Gastos en hardware", "Mayor costo de mantenimiento", 4
+	"¿Cuál es el propósito del SWEBOK?",
+	"Normalizar el conocimiento", 
+	"Describir que parte del conocimiento es generalmente aceptado, organizar esa parte y proporcionar acceso a la información de interés",
+	"Vender libros", 
+	"No divagar en cuanto a investigación ingenieril", 
+	1
 );
 preguntas[10] = new estructura_pregunta(
-	"El código poco legible necesita mas esfuerzo para: ",
-	"escribirlo", "entenderlo",
-	"compilarlo", "ejecutarlo", 2
+	"De los cinco objetivos del SWEBOK ¿Cuál 'Promueve una visión consistente de la ingeniería del software del mundo'?",
+	"4° objetivo", 
+	"5° objetivo",
+	"2° objetivo", 
+	"1° objetivo", 
+	3
 );
 preguntas[11] = new estructura_pregunta(
-	"¿Para qué usa el plan de proyecto el administrador?",
-	"Tomar decisiones del proyecto", "Registrar los requisitos",
-	"Solicitar mantenimiento", "Diseñar el sistema", 1
+	"De los cinco objetivos del SWEBOK ¿Cuál busca 'Caracterizar los contenidos de la disciplina de la ingeniería del software'?",
+	"1° objetivo", 
+	"2° objetivo",
+	"3° objetivo", 
+	"4° objetivo", 
+	2
 );
 preguntas[12] = new estructura_pregunta(
-	"¿Cuál es una forma de medir el progreso para el administrador del proyecto?",
-	"Registrando el tiempo", "Registrando líneas de código",
-	"Con el plan de proyecto", "Con el registro de pagos", 3
+	"De los cinco objetivos del SWEBOK ¿Cuál busca 'Clarificar la situación – y definir fronteras – de la ingeniería del software'?",
+	"3° objetivo", 
+	"2° objetivo",
+	"1° objetivo", 
+	"5° objetivo", 
+	1
 );
 preguntas[13] = new estructura_pregunta(
-	"Es un argumento a favor del enfoque dirigido por un plan: ",
-	"Reduce el tiempo a la mitad", "Reduce los gastos a la mitad",
-	"Mayor convivencia entre el equipo", "Permite detectar errores temprano", 4
+	"De los cinco objetivos del SWEBOK ¿Cuál busca 'Proporcionar al cuerpo de conocimiento de la ingeniería del software con los temas de interés'?",
+	"5° objetivo", 
+	"4° objetivo",
+	"3° objetivo", 
+	"1° objetivo", 
+	1
 );
 
 preguntas[14] = new estructura_pregunta(
-	"¿Qué permite descubrir los errores potenciales y dependencias antes de iniciar el proyecto?",
-	"El Depurador que se use", "Enfoque dirigido por el diseño",
-	"El enfoque dirigo por un modelo", "Un enfoque dirigido por un plan", 4
+	"¿De los cinco objetivos del SWEBOK ¿Cuál busca 'Proporcionar una base para el desarrollo planes de estudio, certificaciones individuales y materiales para licencias'?",
+	"2° objetivo", 
+	"3° objetivo",
+	"1° objetivo", 
+	"5° objetivo", 
+	3
 );
 
 preguntas[15] = new estructura_pregunta(
-	"En un plan de proyectos, esto no se establece: ",
-	"Recursos disponibles", "División del dinero",
-	"Calendario de trabajo", "Quién realiza cada trabajo", 2
+	"¿En cuántas áreas del conocimiento esta dividido el material perteneciente a la ingeniería de software?",
+	"Quince", 
+	"Cien",
+	"Diez", 
+	"Dos",
+	2
 );
 preguntas[16] = new estructura_pregunta(
 	"El plan también debe identificar: ",
@@ -223,3 +192,59 @@ preguntas[23] = new estructura_pregunta(
 	"Análisis de factibilidad", "Errores en el software",
 	"Análisis de riesgo", "Análisis de Errores", 3
 );
+
+
+function generar_examen(){
+	var head_pregunta = "";
+	var aux_pregunta = "";
+	var respuestas = "";
+	var indice = Math.floor(Math.random() * preguntas.length);
+	for(i = 0; i < 10; i++){
+		head_pregunta += '<h3>Pregunta ' + (i+1) + ': ';		
+		while(indice_list.indexOf(indice) != -1)
+			indice = Math.floor(Math.random() * preguntas.length);
+			indice_list.push(indice);
+		aux_pregunta += preguntas[indice]["pregunta"] + '</h3><br>';
+		for (resp in preguntas[indice]["respuestas"]){
+			respuestas += '<input class="answers" type="radio" name="resp'+i+'" value="'+resp+'"><label>' + preguntas[indice]["respuestas"][resp] + '</label><br>';	
+		}
+		pregunta_to_html = head_pregunta + aux_pregunta + respuestas;
+		document.getElementById("pregunta"+i).innerHTML = pregunta_to_html;
+		head_pregunta = "";
+		aux_pregunta = "";
+		respuestas = "";
+	}
+	
+}
+
+function comprobar(){
+	var inputElements = document.getElementsByClassName('answers');
+	for(var i=0; inputElements[i]; ++i){
+      if(inputElements[i].checked){      	
+     	values_list.push(inputElements[i].value);             
+		}
+	}
+	if(values_list.length != indice_list.length){
+		document.getElementById("resultado").innerHTML = '<h2>¡Debes contestar todas las preguntas! Recarga la página por favor</h2>'
+		document.getElementById("boton").innerHTML ='<button type="button" class="btn btn-danger" id="boton3" type="button" onclick="location.reload()">Reiniciar</button>';
+	}
+	else{
+		for (i = 0; i < values_list.length; i++){
+			if (values_list[i] == preguntas[indice_list[i]]["correcta"])
+				buenas ++;
+		}
+
+		var calif = "<br><h2 class=\"cali\">La calificación es: " + buenas + "</h2>";
+		var texto = "";
+		if (buenas < 6)
+			texto += '<p class="bajo">A estudiar más, Doctor, vamos poco a poco.</p>';
+		else if (buenas < 9)
+			texto += '<p class="medio">Va muy bien, Doctor, pero falta todavía.</p>';
+		else
+			texto += '<p class="alto">El mejor, Doctor. Es un genio :)</p>';
+
+		document.getElementById("resultado").innerHTML ='<span id="calificacion">' + calif + '</span>' +
+														'<br><span id="mensaje">' + texto + '</span>';
+		document.getElementById("boton").innerHTML ='<button type="button" class="btn btn-warning" id="boton3" type="button" onclick="location.reload()">Reiniciar</button>';
+	}
+}
