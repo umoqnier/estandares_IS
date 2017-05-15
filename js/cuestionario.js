@@ -280,6 +280,125 @@ preguntas[30] = new estructura_pregunta(
 	2
 );
 
+preguntas[31] = new estructura_pregunta(
+	"¿Cuál es el nombre de la actividad funcional que 'habilita o apoya en el rendimiento de los otros procesos' en SPICE?",
+	"Ingeniería",
+	"Soporte",
+	"Proyecto",
+	"Suministrado al cliente",
+	1
+);
+
+preguntas[32] = new estructura_pregunta(
+	"¿Cuál es el nombre de la actividad funcional que 'establece las metas del negocia y desarrolla recursos para alcanzar las mestas' en SPICE?",
+	"Soporte",
+	"Ingeniería",
+	"Proyecto",
+	"Organización",
+	3
+);
+
+preguntas[33] = new estructura_pregunta(
+	"Las prácticas genéricas de SPICES son ________________",
+	"Difíciles",
+	"Aplicables a todos los procesos",
+	"Innecesarias",
+	"De uso obligatorio",
+	1
+);
+
+preguntas[34] = new estructura_pregunta(
+	"¿Cuántos niveles de capabilidad tienen las prácticas genéricas de SPICE?",
+	"10",
+	"5",
+	"2",
+	"6",
+	3
+);
+
+preguntas[35] = new estructura_pregunta(
+	"Nivel de capabilidad de SPICES que 'falla en la realización'",
+	"Mejoramiento continuo",
+	"Sin realizar",
+	"Planeado y seguido",
+	"Realizado informalmente",
+	1
+);
+
+preguntas[36] = new estructura_pregunta(
+	"Nivel de capabilidad de SPICES que está 'sin planeación ni seguimiento, dependiente del conocimiento individual y de los productos de trabajo identificables'",
+	"Realizado informalmente",
+	"Controlado cualitativamente",
+	"Sin realizar",
+	"Planeado y seguido",
+	0
+);
+
+preguntas[37] = new estructura_pregunta(
+	"Nivel de capabilidad de SPICES que a sido 'verificado acorde con procedimientos específicos, productos de trabajo con forme a estándares y requerimientos específicos'",
+	"Planeado y seguido",
+	"Sin realizar",
+	"Mejoramiento continuo",
+	"Controlado cualitativamente",
+	0
+);
+
+preguntas[38] = new estructura_pregunta(
+	"Nivel de capabilidad de SPICES en el existen 'procesos bien definidos utilizando una versión aprobada'",
+	"Sin realizar",
+	"Bien definido",
+	"Planeado y seguido",
+	"Controlado cualitativamente",
+	1
+);
+
+preguntas[39] = new estructura_pregunta(
+	"Nivel de capabilidad de SPICES que poseé 'medidas detalladas del rendimiento, predicción de capabilidad, administración de objetivos y productos de trabajo evaluados cualitativamente'",
+	"Bien definido",
+	"Controlado cualitativamente",
+	"Realizado informalmente",
+	"Mejoramiento continuo",
+	1
+);
+
+preguntas[40] = new estructura_pregunta(
+	"Nivel de capabilidad de SPICES que poseé 'metas cualitativas de eficacia y eficiencia basados en los objetivos del negocio, re-alimentación cuantitativa para definir procesos y probar nuevas ideas'",
+	"Planeado y seguido",
+	"Mejoramiento continuo",
+	"Controlado cualitativamente",
+	"Bien definido",
+	1
+);
+
+preguntas[41] = new estructura_pregunta(
+	"¿Con que fin es evaluada cada área de procesos en SPICES?",
+	"Pasar los test",
+	"Ser categorizada en algunos de los niveles de capabilidad",
+	"Sin motivo",
+	"Ganar más dinero",
+	1
+);
+
+preguntas[42] = new estructura_pregunta(
+	"¿Mientras CMM está orientado a organizaciones SPICE esta orientado a _____________",
+	"Académicos",
+	"Gobiernos",
+	"Procesos",
+	"Software",
+	2
+);
+
+preguntas[43] = new estructura_pregunta(
+	"¿Con qué objetivo se describe cuidadosamente la evaluación en SPICES?",
+	"Evitar subjetividad en los reportes",
+	"Profesionalismo",
+	"Tener siempre los mejores programadores",
+	"No tener que repetir los procesos de evaluación",
+	0
+);
+
+
+
 function generar_examen(){
 	var head_pregunta = "";
 	var aux_pregunta = "";

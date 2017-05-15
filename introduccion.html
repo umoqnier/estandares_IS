@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - About</title>
+    <title>Introducción</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,23 +42,33 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html"><span class="fa fa-home fa-2x" aria-hidden="true"></span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temas <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introduccion.html">Introducción</a></li>
+                            <li><a href="objetivo.html">Objetivo</a></li>
+                            <li><a href="swebok.html">SWEBOK</a></li>
+                            <li><a href="cmmi.html">CMMI-DEV/IPPD</a></li>
+                            <li><a href="spice.html">SPICE</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="multimedia.html">Multimedia</a>
                     </li>
                     <li>
-                        <a href="post.html">Sample Post</a>
+                        <a href="cuestionario.html">Cuestionario</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="resumen.pdf">Resumen</a>
+                    </li>
+                    <li>
+                        <a href="bibliografia.html">Bibliografía</a>
                     </li>
                 </ul>
             </div>
@@ -69,32 +79,47 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/about-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/intro.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>About Me</h1>
-                        <hr class="small">
-                        <span class="subheading">This is what I do.</span>
+                    <div class="post-heading">
+                        <h1>Introducción</h1>
+                        <h2 class="subheading">Se aborda de forma superficial el contenido del tutorial</h2>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
+    <!-- Post Content -->
+   <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="text-justify">Hoy en día es inevitable pensar en compañías que publiquen productos de software
+                     sin el seguimiento de estándares de algún tipo. En el siguiente turotial se presentarán al menos tres de 
+                     los más fructíferos y enfocados a ciertas actividades (como procesos de desarrollo de software) y otros más 
+                     a la adquisición y preservación del conocimiento generado hasta ahora con respecto a los temas que atiende 
+                     la ingeniería de software.</p>
+
+                    <img src="img/process.png" class="img-responsive img-center" alt="">
+                    <h2 class="section-heading">El temario</h2>
+                    <p class="text-justify">Los temas que se abordarán y la secuencia sugerida para su estudio será la siguiente:
+                        <ul>
+                            <li>SWEBOK (Software Engineering Body of Knowledge)</li>
+                            <li>CMMI-DEV/IPPD (Capability Maturity Model Integration / Integrated Product and Process Development)</li>
+                            <li>SPICES (Software Process Improvement and Capability dEtermination)</li>
+                        </ul>
+                    </p>
+                    
+                    <p class="text-justify">Se concluye el tutorial con un cuestionario que pretende evaluar los conocimientos adquiridos
+                        y para el reforzamiento de los mismos se pone a disposición de los usuarios un resumen y la bibliografía empleada
+                        para la realización de este tutorial.</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <hr>
+    </article>
 
     <!-- Footer -->
     <footer>
@@ -103,7 +128,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="#">
+                            <a href="https://twitter.com/Umoqnier">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -111,7 +136,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/umoqnier">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -119,7 +144,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://github.com/umoqnier">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -127,7 +152,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; Facultad de Ingeniería, UNAM 2017</p>
                 </div>
             </div>
         </div>
@@ -138,10 +163,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
