@@ -41,7 +41,7 @@ preguntas[2] = new estructura_pregunta(
 	0
 );
 preguntas[3] = new estructura_pregunta(
-	"¿Cuantos años de conocimientos se recaudan en el SWEBOK?",
+	"¿Cuántos años de conocimientos se recaudan en el SWEBOK?",
 	"15 años",
 	"100 años",
 	"56 años",
@@ -81,7 +81,7 @@ preguntas[7] = new estructura_pregunta(
 	0
 );
 preguntas[8] = new estructura_pregunta(
-	"¿En que año publica la versión aceptada actualmente del SWEBOK?",
+	"¿En qué año publica la versión aceptada actualmente del SWEBOK?",
 	"2010",
 	"2000",
 	"2004",
@@ -147,7 +147,7 @@ preguntas[15] = new estructura_pregunta(
 	2
 );
 preguntas[16] = new estructura_pregunta(
-	"¿Qué es común en cuanto a desarrollo de productor entre compañias actuales?",
+	"¿Qué es común en cuanto a desarrollo de productor entre compañías actuales?",
 	"Desarrollar todos sus productos desde cero",
 	"Adquirir algunos productos para integrarlos a los propios",
 	"Invertir grandes cantidades de dinero en contratación de personal",
@@ -156,15 +156,15 @@ preguntas[16] = new estructura_pregunta(
 );
 preguntas[17] = new estructura_pregunta(
 	"¿Por qué no es eficaz utilizar modelos de madurez o estándares con problemas específicos del negocio?",
-	"Mantienen barreas para enforcase",
+	"Mantienen barreas para enfocarse",
 	"Son caros",
-	"Funcionan solo en grandes compañias",
+	"Funcionan solo en grandes compañías",
 	"No tienen fundamento científico",
 	 0
 );
 
 preguntas[18] = new estructura_pregunta(
-	"¿Cuanto abarca del ciclo de vida del software la metodología de CMMI-DEV?",
+	"¿Cuánto abarca del ciclo de vida del software la metodología de CMMI-DEV?",
 	"El prototipado",
 	"El mantenimiento",
 	"Inicio y entrega",
@@ -184,32 +184,32 @@ preguntas[19] = new estructura_pregunta(
 preguntas[20] = new estructura_pregunta(
 	"Menciona las cinco áreas que comprenden los procesos de desarrollo específico del CMMI-DEV",
 	"Organización del Proyecto, División de requerimientos, Soluciones Técnicas, Entrega y Mantenimiento",
-	"Prototipado, Levantamiento de requerimientos, Divisón del trabajo, Desarrollo y Entrega",
+	"Prototipado, Levantamiento de requerimientos, División del trabajo, Desarrollo y Entrega",
 	"Direccionamiento, Desarrollo de requerimientos, Soluciones Técnicas, Integración del producto, Verificación y validación",
 	"Introducción, Desarrollo, Objetivos, Conclusión y Mantenimiento",
 	2
 );
 
 preguntas[21] = new estructura_pregunta(
-	"¿Quienes desarrollaron Trillium (metodología derivada de CMM)?",
+	"¿Quiénes desarrollaron Trillium (metodología derivada de CMM)?",
 	"Compañías de telecomunicaciones Canadienses",
 	"Sector salud de India",
-	"Empresarios Japoneces",
+	"Empresarios Japoneses",
 	"Gobierno Estadounidense",
 	0
 );
 
 preguntas[22] = new estructura_pregunta(
-	"¿Quienes desarrollaron BOOTSTRAP (metodología derivada de CMM)?",
-	"Empresarios Japoneces",
+	"¿Quiénes desarrollaron BOOTSTRAP (metodología derivada de CMM)?",
+	"Empresarios Japoneses",
 	"Comunidad Europea de ESPRIT",
-	"Compañias de telecomunicaciones Canadienses",
+	"Compañías de telecomunicaciones Canadienses",
 	"Agencias de seguridad del Reino Unido",
 	 1
 );
 
 preguntas[23] = new estructura_pregunta(
-	"Año en el que se propone SPICE como estándar internacional",
+	"Año en el qué se propone SPICE como estándar internacional",
 	"2000",
 	"1990",
 	"1995",
@@ -218,7 +218,7 @@ preguntas[23] = new estructura_pregunta(
 );
 
 preguntas[24] = new estructura_pregunta(
-	"¿Cual es el enfoque de SPICE?",
+	"¿Cuál es el enfoque de SPICE?",
 	"Procesos y capabilidad",
 	"Desarrollo de personal",
 	"Contratación de buenos desarrolladores",
@@ -227,16 +227,16 @@ preguntas[24] = new estructura_pregunta(
 );
 
 preguntas[25] = new estructura_pregunta(
-	"¿De que constan las prácticas base en SPICE?",
+	"¿De qué constan las prácticas base en SPICE?",
 	"Son las más sencillas de realizar",
 	"Al ser básicas se espera perfección",
-	"Son escenciales para un proceso específico",
+	"Son esenciales para un proceso específico",
 	"No son importantes por que son sencillas",
 	2
 );
 
 preguntas[26] = new estructura_pregunta(
-	"¿En que consisten las prácticas genéricas de SPICE?",
+	"¿En qué consisten las prácticas genéricas de SPICE?",
 	"Institucionalización o implementación de un proceso",
 	"Interfaces para el usuario",
 	"Replanteamiento de los procesos para adaptarlos",
@@ -245,7 +245,7 @@ preguntas[26] = new estructura_pregunta(
 );
 
 preguntas[27] = new estructura_pregunta(
-	"¿Cuantas son las actividades consideradas en la forma funcional de SPICE?",
+	"¿Cuántas son las actividades consideradas en la forma funcional de SPICE?",
 	"10",
 	"3",
 	"9",
@@ -263,7 +263,7 @@ preguntas[28] = new estructura_pregunta(
 );
 
 preguntas[29] = new estructura_pregunta(
-	"¿Cuál es el nombre de la actividad funcional que 'especifíca, implementa y mantiene el sistema' en SPICE?",
+	"¿Cuál es el nombre de la actividad funcional que 'especifica, implementa y mantiene el sistema' en SPICE?",
 	"Proyecto",
 	"Ingeniería",
 	"Organización",
@@ -371,7 +371,7 @@ preguntas[40] = new estructura_pregunta(
 );
 
 preguntas[41] = new estructura_pregunta(
-	"¿Con que fin es evaluada cada área de procesos en SPICES?",
+	"¿Con qué fin es evaluada cada área de procesos en SPICES?",
 	"Pasar los test",
 	"Ser categorizada en algunos de los niveles de capabilidad",
 	"Sin motivo",
@@ -442,11 +442,11 @@ function comprobar(){
 		var calif = "<br><h2 class=\"cali\">La calificación es: " + buenas + "</h2>";
 		var texto = "";
 		if (buenas < 6)
-			texto += '<p class="bajo">A estudiar más, Doctor, vamos poco a poco.</p>';
+			texto += '<p class="bajo">Falta repasar los temas. Ánimo</p>';
 		else if (buenas < 9)
-			texto += '<p class="medio">Va muy bien, Doctor, pero falta todavía.</p>';
+			texto += '<p class="medio">Vas muy bien pero falta mejorar todavía.</p>';
 		else
-			texto += '<p class="alto">El mejor, Doctor. Es un genio :)</p>';
+			texto += '<p class="alto">Increíble, excelente calificación</p>';
 
 		document.getElementById("resultado").innerHTML ='<span id="calificacion">' + calif + '</span>' +
 														'<br><span id="mensaje">' + texto + '</span>';
